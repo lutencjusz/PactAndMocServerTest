@@ -11,6 +11,7 @@ target/
 *.iws
 *.iml
 *.ipr
+mockserver-netty-5.14.0-shaded.jar
 
 ### Eclipse ###
 .apt_generated
