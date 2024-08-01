@@ -1,0 +1,56 @@
+{
+  "provider": {
+    "name": "test_provider"
+  },
+  "consumer": {
+    "name": "test_consumer"
+  },
+  "interactions": [
+    {
+      "description": "Przykładowy test serwera HTTP w oparciu o plik test_consumer-test_provider.json",
+      "request": {
+        "method": "GET",
+        "path": "/test/1",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "baseURI": "http://localhost:8081",
+          "description": "mock test"
+        },
+        "matchingRules": {
+          "header": {
+            "Content-Type": {
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "application/json"
+                }
+              ],
+              "combine": "AND"
+            }
+          }
+        }
+      },
+      "providerStates": [
+        {
+          "name": "test state"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    },
+    "pact-jvm": {
+      "version": "4.0.10"
+    }
+  }
+}
