@@ -1,4 +1,4 @@
-# PactAndMocServerTest
+# PactAndMockServerTest
 
 This repository contains a project to test the integration of Pact and MockServer for contract testing in a Java application.
 
